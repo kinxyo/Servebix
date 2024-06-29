@@ -1,3 +1,9 @@
 tmp/
 **.sum
 .air.toml
+
+# Package manager
+yarn.lock
+bun.lockb
+package-lock.json
+pnpm-lock.yaml
