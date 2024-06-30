@@ -20,14 +20,14 @@ async function setGreet() {
 <template>
 
   <Card>
-  <CardHeader>
-    <CardTitle> Server Dashboard </CardTitle>
-    <CardDescription> © 2024 Ebix Inc. </CardDescription>
-  </CardHeader>
-  <CardContent class="text-emerald-500 font-bold">{{ greet }}</CardContent>
-  <CardFooter>
-    <Button @click="setGreet" > Fetch Status </Button>
-  </CardFooter>
+    <CardHeader>
+      <CardTitle> Server Dashboard</CardTitle>
+      <CardDescription> © 2024 Ebix Inc.</CardDescription>
+    </CardHeader>
+    <CardContent class="text-emerald-500 font-bold">{{ greet }}</CardContent>
+    <CardFooter>
+      <Button @click="setGreet"> Fetch Status</Button>
+    </CardFooter>
   </Card>
 
 </template>

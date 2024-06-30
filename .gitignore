@@ -2,6 +2,10 @@ tmp/
 **.sum
 .air.toml
 
+OLDFILE.md
+TUTORIAL.md
+STRUCTURE.Md
+
 # Package manager
 yarn.lock
 bun.lockb

@@ -1,4 +1,8 @@
-package main
+
+# go old file
+
+```go
+package Servebix
 
 import (
 	"encoding/json"
@@ -168,3 +172,4 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 		broadcast <- msg
 	}
 }
+```

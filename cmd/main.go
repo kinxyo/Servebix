@@ -24,7 +24,7 @@ func main() {
 	})
 
 	router.HandleFunc("/go", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Healthy!"))
+		w.Write([]byte("healthy!"))
 	})
 
 	http.ListenAndServe(":8000", handler)
