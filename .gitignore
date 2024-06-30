@@ -1,10 +1,15 @@
+# go clear
 tmp/
 **.sum
 .air.toml
 
+# Misc
 OLDFILE.md
 TUTORIAL.md
 STRUCTURE.Md
+
+# config
+.env
 
 # Package manager
 yarn.lock
