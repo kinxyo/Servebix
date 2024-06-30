@@ -1,32 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"github.com/rs/cors"
-	"net/http"
+	"github.com/kinxyo/Servebix.git/cmd/api"
+	"log"
 )
 
 func main() {
 
-	router := http.NewServeMux()
+	server := api.NewAPI(":8000", nil)
 
-	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"*"},
-		AllowedMethods:   []string{"GET", "POST"},
-		AllowedHeaders:   []string{"Authorization", "Content-Type"},
-		AllowCredentials: true,
-	})
-
-	handler := c.Handler(router)
-
-	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "<h1>go server running!</h1>")
-	})
-
-	router.HandleFunc("/go", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("healthy!"))
-	})
-
-	http.ListenAndServe(":8000", handler)
+	if err := server.Start(); err != nil {
+		log.Fatal(err)
+	}
 
 }
