@@ -38,8 +38,11 @@ func (api *API) Start() error {
 	homeHandler.RegisterRoutes(router)
 
 	// USER
-	userHandler := user.NewHandler()
+	userStore := user.NewStore(api.db)
+	userHandler := user.NewHandler(userStore)
 	userHandler.RegisterRoutes(router)
+
+	// DOCTOR
 
 	/* ----------------- */
 

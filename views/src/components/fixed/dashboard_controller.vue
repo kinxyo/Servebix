@@ -4,16 +4,13 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Button} from "@/components/ui/button/index.js";
 import {onBeforeMount, ref} from "vue";
 import {fetchGreet} from "@/composables/dal.js";
+import {refreshPage} from "@/utils/utils.js";
 
 const greet = ref("");
 
 onBeforeMount(async () => {
-  await setGreet();
-});
-
-async function setGreet() {
   greet.value = await fetchGreet()
-}
+});
 
 </script>
 
@@ -26,7 +23,7 @@ async function setGreet() {
     </CardHeader>
     <CardContent class="text-emerald-500 font-bold">{{ greet }}</CardContent>
     <CardFooter>
-      <Button @click="setGreet"> Fetch Status</Button>
+      <Button @click="refreshPage"> Update Status </Button>
     </CardFooter>
   </Card>
 

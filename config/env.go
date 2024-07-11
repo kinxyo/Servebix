@@ -26,7 +26,7 @@ func initConfig() Config {
 		DBUser:     getEnv("DB_USER", "root"),
 		DBPassword: getEnv("DB_PASSWORD", "test"),
 		DBAddress:  getEnv("DB_ADDRESS", "127.0.0.1:3306"),
-		DBName:     getEnv("DB_NAME", "servebix"),
+		DBName:     getEnv("DB_NAME", "ebix"),
 	}
 
 }

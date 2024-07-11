@@ -10,7 +10,6 @@ import (
 // cfg --> configuration
 
 func GetDB() (*sql.DB, error) {
-
 	cfg := mysql.Config{
 		User:                 config.Env.DBUser,
 		Passwd:               config.Env.DBPassword,
@@ -28,6 +27,7 @@ func GetDB() (*sql.DB, error) {
 
 	return db, nil
 }
+
 func DbInit(db *sql.DB) {
 	err := db.Ping()
 	if err != nil {
